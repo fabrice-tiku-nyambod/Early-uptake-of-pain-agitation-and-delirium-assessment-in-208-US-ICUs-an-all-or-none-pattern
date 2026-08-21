@@ -164,9 +164,12 @@ the result as associational only.
 
 ## Data availability and license
 
-Code is released under the [MIT License](LICENSE). The underlying patient
-records are governed by the PhysioNet Credentialed Health Data Use Agreement and
-are **not** included or redistributable.
+Code is released under the [MIT License](LICENSE).
+
+**The licence covers the code in this repository only.** The underlying patient
+records come from the eICU Collaborative Research Database and are governed by
+the PhysioNet Credentialed Health Data Use Agreement. No patient data is
+included here and none may be redistributed.
 
 ## Citation
 

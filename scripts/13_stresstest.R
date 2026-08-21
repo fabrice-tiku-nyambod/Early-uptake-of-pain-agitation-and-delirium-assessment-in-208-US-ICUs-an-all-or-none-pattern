@@ -18,7 +18,7 @@
 #  7. Ventilation Simpson reversal under the strict definition.
 # ---------------------------------------------------------------------------
 
-for (.p in c("R/00_common.R", "00_common.R", "../R/00_common.R"))
+for (.p in c("scripts/00_common.R", "00_common.R", "../scripts/00_common.R"))
   if (file.exists(.p)) { source(.p); break }
 if (!exists("PROJ")) stop("run this from the repository root", call. = FALSE)
 suppressPackageStartupMessages(library(lme4))

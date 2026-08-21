@@ -12,7 +12,7 @@
 t0 <- Sys.time()
 QUICK <- "--quick" %in% commandArgs(trailingOnly = TRUE)
 
-for (.p in c("R/00_common.R", "00_common.R")) if (file.exists(.p)) { source(.p); break }
+for (.p in c("scripts/00_common.R", "00_common.R")) if (file.exists(.p)) { source(.p); break }
 if (!exists("PROJ")) stop("run this from the repository root", call. = FALSE)
 
 need <- c("data_private/cohort_raw.csv",
@@ -55,7 +55,7 @@ cat("R ", as.character(getRversion()), " | ", ifelse(QUICK, "QUICK mode", "full 
 
 ok <- 0L
 for (st in STEPS) {
-  f <- file.path(PROJ, "R", st[1])
+  f <- file.path(PROJ, "scripts", st[1])
   if (QUICK && st[3] == "yes") { cat(sprintf("  SKIP  %-28s (slow)\n", st[1])); next }
   cat(sprintf("  RUN   %-28s %s\n", st[1], st[2])); flush.console()
   t <- system.time(res <- try(source(f, local = new.env(), echo = FALSE), silent = TRUE))

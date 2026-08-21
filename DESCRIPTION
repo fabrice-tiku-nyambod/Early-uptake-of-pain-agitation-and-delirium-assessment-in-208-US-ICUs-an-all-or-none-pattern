@@ -1,0 +1,36 @@
+Package: padUptakeEICU
+Title: Early Uptake of Pain, Agitation and Delirium Assessment in 208 US ICUs
+Version: 1.0.0
+Authors@R: c(
+    person("Fabrice T.", "Nyambod", email = "ntiku2@jh.edu", role = c("aut", "cre"),
+           comment = c(ORCID = "0009-0006-6592-2673")),
+    person("January G.", "Msemakweli", role = "aut"),
+    person("Aja", "Claris", role = "aut"),
+    person("Murishi", "Onesphore", role = "aut"),
+    person("Victor", "Okpanachi", role = "aut"))
+Description: Analysis pipeline for a retrospective cohort study of documented
+    pain, agitation and delirium assessment across 208 US intensive care units
+    in the eICU Collaborative Research Database, 2014-2015. This is a research
+    compendium rather than an installable package: the DESCRIPTION exists to
+    declare the dependency set and the R version the analysis was run under.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Depends:
+    R (>= 4.3.0)
+Imports:
+    data.table (>= 1.14.0),
+    ggplot2 (>= 3.4.0),
+    lme4 (>= 1.1.30),
+    diptest (>= 0.76),
+    sandwich (>= 3.0.0),
+    lmtest (>= 0.9.38),
+    cobalt (>= 4.4.0),
+    patchwork (>= 1.1.0),
+    officer (>= 0.6.0),
+    flextable (>= 0.8.0),
+    magick (>= 2.7.0),
+    scales (>= 1.2.0)
+Suggests:
+    testthat (>= 3.0.0),
+    httr,
+    jsonlite

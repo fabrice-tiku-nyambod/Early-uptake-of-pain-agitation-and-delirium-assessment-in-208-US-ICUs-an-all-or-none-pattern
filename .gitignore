@@ -51,3 +51,8 @@ results/
 # built from docs/TABLES.md and figures/
 submission/Tables.docx
 submission/Figures.docx
+
+# The cover letter is written for the editors of one journal, not for the field.
+# It stays local and out of the public repository.
+submission/Cover_Letter.md
+submission/Cover_Letter.docx

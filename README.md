@@ -64,7 +64,7 @@ R/                   analysis pipeline, numbered in execution order
 R/archive/           superseded scripts, kept for provenance, not run
 run_all.R            pipeline runner
 docs/                manuscript source and reference list
-submission/          title page, cover letter, highlights, references.bib
+Journal-of-Critical-Care/          title page, cover letter, highlights, references.bib
 
 data_private/        NOT COMMITTED - patient data, governed by the DUA
 results/             NOT COMMITTED - analysis objects and the run log
@@ -97,7 +97,7 @@ agreement forbids redistribution.
 | `13_stresstest.R` | Seven adversarial checks, including the block bootstrap |
 | `14_outcomes.R` | Population burden; outcome associations, stated as associational only |
 | `16_figures.R` | The three manuscript figures |
-| `15_build_docx.R` | Builds `submission/*.docx` from the Markdown sources |
+| `15_build_docx.R` | Builds `Journal-of-Critical-Care/*.docx` from the Markdown sources |
 
 ## Methodological notes
 

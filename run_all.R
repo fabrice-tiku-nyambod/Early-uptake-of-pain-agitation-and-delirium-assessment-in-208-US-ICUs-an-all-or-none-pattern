@@ -42,7 +42,7 @@ STEPS <- list(
   c("13_stresstest.R",         "adversarial checks",                         "yes"),
   c("14_outcomes.R",           "population burden and outcome association",  "no"),
   c("16_figures.R",            "the three manuscript figures",               "no"),
-  c("15_build_docx.R",         "submission package -> submission/*.docx",    "no")
+  c("15_build_docx.R",         "submission package -> Journal-of-Critical-Care/*.docx",    "no")
 )
 
 log <- file.path(PROJ, "results", "run_all.log")

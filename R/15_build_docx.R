@@ -1,17 +1,17 @@
 # ---------------------------------------------------------------------------
 # 15_build_docx.R
 #
-# Builds the Word submission package into submission/. Standing requirement:
-# every deliverable in submission/ is .docx, because that is what Elsevier
+# Builds the Word submission package into Journal-of-Critical-Care/. Standing requirement:
+# every deliverable in Journal-of-Critical-Care/ is .docx, because that is what Elsevier
 # takes. The markdown files in docs/ remain the editable source; this script is
 # a converter and should never be edited to fix content.
 #
-#   docs/MANUSCRIPT_v1.md      ->  submission/Manuscript.docx
-#   docs/TABLES.md             ->  submission/Tables.docx
+#   docs/MANUSCRIPT_v1.md      ->  Journal-of-Critical-Care/Manuscript.docx
+#   docs/TABLES.md             ->  Journal-of-Critical-Care/Tables.docx
 #   docs/REFERENCES_ama.md     ->  appended to Manuscript.docx
-#   submission/Title_Page.md   ->  submission/Title_Page.docx
-#   submission/highlights.md   ->  submission/Highlights.docx
-#   figures/*.tiff             ->  submission/Figures.docx  (PNG for Word)
+#   Journal-of-Critical-Care/Title_Page.md   ->  Journal-of-Critical-Care/Title_Page.docx
+#   Journal-of-Critical-Care/highlights.md   ->  Journal-of-Critical-Care/Highlights.docx
+#   figures/*.tiff             ->  Journal-of-Critical-Care/Figures.docx  (PNG for Word)
 #
 # pandoc is not installed on this machine, so the conversion is done with
 # officer/flextable directly. Serif throughout, per standing preference.
@@ -38,7 +38,7 @@ HAVE_MAGICK <- requireNamespace("magick", quietly = TRUE)
        "contain a .projectroot file.", call. = FALSE)
 }
 PROJ <- .find_root()
-SUB  <- file.path(PROJ, "submission")
+SUB  <- file.path(PROJ, "Journal-of-Critical-Care")
 FONT <- "Times New Roman"
 dir.create(SUB, showWarnings = FALSE)
 
@@ -244,7 +244,7 @@ if (length(figs)) {
   built <- c(built, file.path(SUB, "Figures.docx"))
 }
 
-cat("\nBuilt into submission/:\n")
+cat("\nBuilt into Journal-of-Critical-Care/:\n")
 for (f in built) cat(sprintf("  %-22s %6.0f KB\n", basename(f), file.size(f) / 1024))
 if (!HAVE_MAGICK) cat("\n  NOTE: magick not installed; figures not embedded. Submit the TIFFs.\n")
 cat("\nSource of truth remains the markdown in docs/. Re-run this script after any edit.\n")

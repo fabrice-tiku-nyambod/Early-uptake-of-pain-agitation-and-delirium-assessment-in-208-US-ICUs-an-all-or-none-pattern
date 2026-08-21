@@ -12,7 +12,7 @@ results/*.log
 *.rds
 
 # Rendered outputs that are regenerated from source
-submission/figures_png/
+Journal-of-Critical-Care/figures_png/
 
 # R
 .Rhistory
@@ -49,10 +49,10 @@ docs/TABLES.md
 # analysis objects and the run log
 results/
 # built from docs/TABLES.md and figures/
-submission/Tables.docx
-submission/Figures.docx
+Journal-of-Critical-Care/Tables.docx
+Journal-of-Critical-Care/Figures.docx
 
 # The cover letter is written for the editors of one journal, not for the field.
 # It stays local and out of the public repository.
-submission/Cover_Letter.md
-submission/Cover_Letter.docx
+Journal-of-Critical-Care/Cover_Letter.md
+Journal-of-Critical-Care/Cover_Letter.docx

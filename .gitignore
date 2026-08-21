@@ -56,3 +56,8 @@ Journal-of-Critical-Care/Figures.docx
 # It stays local and out of the public repository.
 Journal-of-Critical-Care/Cover_Letter.md
 Journal-of-Critical-Care/Cover_Letter.docx
+
+# The manuscript itself stays out of the public repository. This repository
+# publishes the analysis, not the paper.
+docs/MANUSCRIPT_v1.md
+Journal-of-Critical-Care/Manuscript.docx

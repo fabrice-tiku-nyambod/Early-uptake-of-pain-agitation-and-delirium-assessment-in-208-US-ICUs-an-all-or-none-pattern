@@ -1,4 +1,8 @@
-# Early uptake of guideline-recommended pain, agitation, and delirium assessment in 208 US intensive care units
+# Early uptake of guideline-recommended pain, agitation, and delirium assessment in 208 US intensive care units: an all-or-none pattern
+
+**Nyambod FT, Msemakweli JG, Claris A, Onesphore M, Okpanachi V**
+
+Analysis repository | version of 2026-08-21 | manuscript under review at *Journal of Critical Care*
 
 Analysis code for a study of how far US intensive care units had adopted routine
 pain, agitation, and delirium assessment in the one to two years following the

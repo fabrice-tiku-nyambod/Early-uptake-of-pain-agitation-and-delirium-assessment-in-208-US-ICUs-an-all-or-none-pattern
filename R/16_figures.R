@@ -1,8 +1,8 @@
 # ---------------------------------------------------------------------------
 # 16_figures.R -- the three manuscript figures
 #
-#   Figure 1  per-hospital shortfall: pain documented, delirium not
-#   Figure 2  uptake 2014-2015: a few hospitals switched on, most did not
+#   Figure 1  uptake 2014-2015: a few hospitals switched on, most did not
+#   Figure 2  per-hospital shortfall: pain documented, delirium not
 #   Figure 3  A intensity where screening happened, B population burden
 #
 # Palette: ordinal blue ramp #74a9cf / #2166ac / #053061. Pain, sedation and
@@ -54,7 +54,7 @@ h <- d[, .(n = .N,
            Sedation = 100 * mean(any_sedation_assess),
            Delirium = 100 * mean(any_delirium_strict)), by = hospitalid][n >= MIN_STAYS]
 
-## ===== FIGURE 1 -- the within-hospital shortfall ===========================
+## ===== FIGURE 2 -- the within-hospital shortfall ===========================
 # Hospitals ordered by pain documentation, with pain and validated delirium
 # joined by a line. The vertical gap is the shortfall inside one institution,
 # holding the nurses, the chart and the patients constant. The long floor of
@@ -74,9 +74,9 @@ p1 <- ggplot(hh) +
        y = "Stays with assessment documented",
        subtitle = sprintf("%d hospitals; the vertical gap is the within-hospital shortfall", nrow(hh))) +
   th()
-tif(p1, "Figure1_shortfall", 6.6, 3.6)
+tif(p1, "Figure2_shortfall", 6.6, 3.6)
 
-## ===== FIGURE 2 -- uptake, 2014 to 2015 ====================================
+## ===== FIGURE 1 -- uptake, 2014 to 2015 ====================================
 # Every hospital contributing in both years. The 14 that crossed the adopter
 # threshold are drawn dark; the rest are grey and overwhelmingly flat. The fan
 # rising out of zero is the mechanism: programmes switched on, they did not
@@ -109,7 +109,7 @@ p2 <- ggplot(lgy, aes(yr, pct, group = hospitalid)) +
   labs(x = NULL, y = "Stays with validated delirium assessment",
        subtitle = sprintf("Each line is one of %d hospitals contributing in both years", nrow(w))) +
   th()
-tif(p2, "Figure2_uptake", 4.6, 4.2)
+tif(p2, "Figure1_uptake", 4.6, 4.2)
 
 ## ===== FIGURE 3 -- intensity (A) and population burden (B) =================
 s <- d[any_delirium_strict == 1][, per_day := n_delirium_strict_obs / pmax(los_days, 1)]
